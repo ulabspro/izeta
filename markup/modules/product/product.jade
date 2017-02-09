@@ -1,0 +1,42 @@
+mixin product()
+  .product
+    .row
+      .columns.small-3.medium-1
+        .product-small-images
+          img(src="%=staticPrefix=%img/content/product-small.jpg").active
+          img(src="%=staticPrefix=%img/content/product-small.jpg")
+          img(src="%=staticPrefix=%img/content/product-small.jpg")
+          img(src="%=staticPrefix=%img/content/product-small.jpg")
+          img(src="%=staticPrefix=%img/content/product-small.jpg")
+          img(src="%=staticPrefix=%img/content/product-small.jpg")
+      .columns.small-9.medium-5
+        .product-big-image
+          img(src="%=staticPrefix=%img/content/product-big.jpg").active
+          img(src="%=staticPrefix=%img/content/product-big.jpg")
+          img(src="%=staticPrefix=%img/content/product-big.jpg")
+          img(src="%=staticPrefix=%img/content/product-big.jpg")
+          img(src="%=staticPrefix=%img/content/product-big.jpg")
+          img(src="%=staticPrefix=%img/content/product-big.jpg")
+      .columns.small-12.medium-6
+        .product-content
+          h1 Шуба из меха
+          p Описание товара. Аффинное преобразование, соприкоснувшись в чем-то со своим главным антагонистом в постструктурной поэтике, текстологически отталкивает прозаический дискурс. Категория текста осмысленно представляет собой орнаментальный сказ. Полисемия осознаёт изоморфный математический анализ.
+
+        .product-meta
+          .row
+            .columns.small-12.medium-6
+              select
+                option Размер
+            .columns.small-12.medium-6
+              select
+                option Цвет
+
+        .row.align-middle
+          .columns
+            button(type="button").button.expanded.product-button Добавить в корзину
+          .columns.shrink
+            a(href="#").product-icon
+              i.icon.icon-hearth
+          .columns.shrink
+            a(href="#").product-icon
+              i.icon.icon-share

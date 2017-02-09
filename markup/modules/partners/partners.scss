@@ -1,0 +1,20 @@
+.partners
+{
+    padding-bottom: rem-calc(40);
+    &__title
+    {
+        font-size: rem-calc(45);
+
+        padding-top: rem-calc(40);
+        padding-bottom: rem-calc(40);
+
+        text-transform: uppercase;
+
+        color: $purple;
+    }
+    img
+    {
+        width: 70%;
+        margin: auto;
+    }
+}

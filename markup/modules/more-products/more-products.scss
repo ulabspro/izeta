@@ -1,0 +1,43 @@
+.more-products
+{
+	padding-bottom: rem-calc(40);
+    &__title
+    {
+        font-size: rem-calc(45);
+
+        padding-top: rem-calc(20);
+        padding-bottom: rem-calc(20);
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $purple;
+    }
+}
+
+.more-products-slider
+{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.slick-arrow
+{
+    text-indent: -9999px;
+
+    @include vertical-center;
+}
+
+.slick-prev
+{
+    left: 20px;
+
+    @include bg-svg($prev);
+}
+
+.slick-next
+{
+    right: 20px;
+
+    @include bg-svg($next);
+}

@@ -1,0 +1,7 @@
+mixin more-products()
+  .more-products
+    .more-products__title Вам также может понравиться
+    .more-products-slider.row
+      - for (var i = 0; i < 7; i++)
+        .more-products__item.columns
+          img(src="%=staticPrefix=%img/content/more-products.jpg" alt="")

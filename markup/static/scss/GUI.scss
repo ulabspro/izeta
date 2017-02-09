@@ -1,0 +1,92 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+
+// foundation settings
+@import "izeta_settings.scss";
+$foundation-colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  alert: $alert-color,
+  warning: $warning-color,
+  white: $white,
+  black: $black
+) !default;
+
+// foundation styles
+@include foundation-everything($flex: true);
+
+
+.row {
+  &.full {
+    width: 100%;
+    max-width: initial;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &.noGutter {
+    .columns {
+      padding: 0;
+    }
+  }
+}
+
+// columns modifiers
+.columns {
+  position: relative;
+  &.noGutter {
+    padding: 0;
+  }
+}
+
+.logo {
+  display: block;
+  //    margin: 35px auto;
+
+  @include bg($logo);
+}
+
+.panel-button {
+  width: 100%;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #e3f6f4;
+  border: 2px solid $blue;
+  background-color: transparent;
+  &:hover {
+    background-color: $blue;
+  }
+  &--inline-block {
+    width: 35%;
+  }
+  &--rtl {
+    background-color: $blue;
+  }
+}
+
+
+.button {
+  text-transform: uppercase;
+}
+
+
+.input-group {
+  @include breakpoint(small only) {
+    display: block;
+    .input-group-field {
+      display: block;
+
+      width: 100%;
+    }
+    .input-group-button {
+      display: block;
+
+      width: 100%;
+      .button {
+        width: 100%;
+      }
+    }
+  };
+}

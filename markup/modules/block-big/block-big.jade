@@ -1,0 +1,10 @@
+mixin block-big(data, mod)
+  - var data = getBigBlockData(data)
+  - var mod = mod || 'center';
+  .block-big.row.full.noGutter
+    .columns
+      img(src=data.img)
+      .block-big-panel.callout.text-center(class="block-big-panel--"+mod)
+        h3.block-big-panel__title #{data.title}
+        p.block-big-panel__text #{data.text}
+        a.button.hollow(href=data.link) #{data.btnText}

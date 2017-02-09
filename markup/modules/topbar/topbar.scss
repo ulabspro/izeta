@@ -1,0 +1,57 @@
+
+.top-bar
+{
+    @include breakpoint(medium)
+    {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+
+        width: 100%;
+
+        background-color: rgba($purple,.62);
+    }
+    ul
+    {
+        background: none;
+    }
+}
+
+.top-bar-icons
+{
+    line-height: 1;
+    a
+    {
+        display: block;
+    }
+    .icon
+    {
+        font-size: rem-calc(18);
+
+        margin-right: 0;
+
+        color: $white;
+    }
+    li a
+    {
+        padding: 0 .5rem;
+    }
+}
+
+.language-change
+{
+    font-size: rem-calc(19);
+    &__text
+    {
+        padding-right: 10px;
+    }
+    &__item
+    {
+        color: #fff;
+    }
+    &__separate
+    {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}

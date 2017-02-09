@@ -1,0 +1,38 @@
+mixin topbar(data)
+  .top-bar
+    .top-bar-left
+      //- a.menu-icon.hide-for-medium(data-open="offCanvas" aria-expanded="false" aria-controls="offCanvasLeft")
+      a.mainmenu__toggler.hide-for-large(data-open="offCanvas",
+                          aria-expanded="false",
+                          aria-controls="offCanvasLeft")
+    .top-bar-right
+      .row.align-right
+        .language-change.columns
+          .row.full.noGutter
+            .columns.shrink
+              a(href="#").language-change__item RU
+            .columns.shrink
+              .language-change__separate /
+            .columns.shrink
+              a(href="#").language-change__item EN
+        ul.menu.top-bar-icons.columns
+          li
+            //- a(href='#').top-bar-icons__user
+            a(href="#" title="")
+              i.icon.icon-user
+          li
+            //- a(href='#').top-bar-icons__envelope
+            a(href="#" title="")
+              i.icon.icon-envelope
+          li
+            //- a(href='#').top-bar-icons__favourite
+            a(href="#" title="")
+              i.icon.icon-hearth
+          li
+            //- a(href='#').top-bar-icons__search
+            a(href="#" title="")
+              i.icon.icon-search
+          li
+            //- a(data-open="modal-basket").top-bar-icons__basket 
+            a(href="#" title="" data-open="modal")
+              i.icon.icon-basket

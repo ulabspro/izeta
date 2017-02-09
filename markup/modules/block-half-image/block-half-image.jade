@@ -1,0 +1,7 @@
+mixin block-half-image(data)
+  - var data = getBigBlockData(data)
+  .block-half-image.row.full.noGutter
+    .columns.small-12.medium-6
+      img(src=data.img[0])
+    .columns.small-12.medium-6
+      img(src=data.img[1])

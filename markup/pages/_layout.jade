@@ -1,0 +1,70 @@
+- function getBigBlockData(data){
+-   data = data || {};
+-   data.link = data.link || '/';
+-   data.btnText = data.btnText || '';
+-   data.text = data.text || '';
+-   data.title = data.title || 'заголовок';
+-   data.img = data.img || 'http://placehold.it/1920x900&text=mainpage';
+-   return data;
+- }
+
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../modules/head/head
+  include ../modules/footer/footer
+  include ../modules/menu/menu
+  include ../modules/topbar/topbar
+
+  //- blocks
+  include ../modules/block-big/block-big
+  include ../modules/block-half/block-half
+  include ../modules/block-inline/block-inline
+  include ../modules/block-triple/block-triple
+  include ../modules/block-manager/block-manager
+  include ../modules/block-slide/block-slide
+  include ../modules/block-double/block-double
+  include ../modules/block-store/block-store
+  include ../modules/block-press/block-press
+  include ../modules/block-big-slide/block-big-slide
+  include ../modules/block-instagram/block-instagram
+  include ../modules/block-half-image/block-half-image
+  include ../modules/block-contact/block-contact
+  include ../modules/block-half-contacts/block-half-contacts
+  include ../modules/block-map/block-map
+  include ../modules/service-slider/service-slider
+
+  include ../modules/partners/partners
+
+  include ../modules/filter/filter
+
+  //- product page
+  include ../modules/product/product
+  include ../modules/shape/shape
+  include ../modules/more-products/more-products
+
+  include ../modules/modal/modal
+
+  head
+    +head(head.defaults)
+  body.page
+    block variables
+      - var whiteMenu = false
+      //- variables
+    .off-canvas-wrapper
+      .off-canvas-wrapper-inner(data-off-canvas-wrapper)
+        +menu-mixin(pages, whiteMenu)
+        .off-canvas-content(data-off-canvas-content)
+          +topbar()
+          block content
+            h1 hello
+    block footer
+      +footer
+      +modal-basket
+
+      //- Main scripts. You can replace it, but I recommend you to leave it here
+      script(src='%=static=%js/main%=hash=%%=min=%.js')
+      script.
+        $(document).ready(function() {
+          $(document).foundation();
+        });

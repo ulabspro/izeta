@@ -1,0 +1,15 @@
+mixin block-half(data)
+  - var data = getBigBlockData(data)
+  - var mods = '';
+  - for (var i = 1; i < arguments.length; i++) {
+  - mods+=(' block-half--'+arguments[i]);
+  - }
+  .block-half.row.full.noGutter.align-middle.align-stretch(class=mods)
+    .block-half__left.columns.small-12.medium-6
+      img(src=data.img)
+    .block-half__right.columns.small-12.medium-6.text-center
+      .block-half-panel
+        h3.block-half-panel__title #{data.title}
+        p.block-half-panel__text #{data.text}
+        - if (data.btnText != '')
+          a.button.hollow(href=data.link class="panel-button--"+mod) #{data.btnText}

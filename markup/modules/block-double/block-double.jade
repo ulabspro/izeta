@@ -1,0 +1,17 @@
+mixin block-double(data)
+  - var data = getBigBlockData(data)
+  - var mods = '';
+  - for (var i = 1; i < arguments.length; i++) {
+  - mods+=('block-double--'+arguments[i]);
+  - }
+  .block-double.row.full.noGutter(class=mods)
+    .block-double__item.columns.small-12.medium-6
+      img(src=data.img[0])
+      .block-double-panel.text-center
+        h3.block-double-panel__title #{data.title[0]}
+        a.button.hollow(href=data.link class="panel-button--"+mod) #{data.btnText}
+    .block-double__item.columns.small-12.medium-6
+      img(src=data.img[1])
+      .block-double-panel.text-center
+        h3.block-double-panel__title #{data.title[1]}
+        a.button.hollow(href=data.link class="panel-button--"+mod) #{data.btnText}

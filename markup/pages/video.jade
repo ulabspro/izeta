@@ -1,0 +1,17 @@
+extends ./_layout.jade
+
+
+
+block append variables
+  - var absoluteMenu = true;
+
+
+block content
+  - var data = {img:'%=staticPrefix=%img/content/collection-29.jpg',title:"Показ 2016",btnText:'смотреть видео'}
+  +block-big(data, 'left')
+ 
+  - var data = {img:'%=staticPrefix=%img/content/collection-30.jpg',title:"Opening of The Season",btnText:'Подробнее'}
+  +block-big(data)
+
+  - var data = {img:'%=staticPrefix=%img/content/collection-31.jpg',title:"Участие в Съемках", text: "IZETA Fur Fashion House основан в 1997 году. Дом моды создает меховые изделия Lux-класса, вечернюю одежду Haute Couture, а также изделия из экзотических видов кожи.",btnText:'Подробнее'}
+  +block-half(data, 'white')

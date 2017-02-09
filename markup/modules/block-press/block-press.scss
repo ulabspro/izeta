@@ -1,0 +1,60 @@
+.block-press-item
+{
+    position: relative;
+    &:hover
+    {
+        .block-press-item__content
+        {
+            visibility: visible;
+
+            opacity: 1;
+        }
+    }
+    &__cover
+    {
+        position: absolute;
+        z-index: 1;
+        right: 10px;
+        bottom: 10px;
+
+        width: 40%;
+        padding: rem-calc(10);
+
+        background-color: rgba($purple, .3);
+    }
+    &__content
+    {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+
+        visibility: hidden;
+
+        width: 100%;
+        height: 100%;
+
+        transition: all .4s ease-in-out;
+        text-align: center;
+
+        opacity: 0;
+        background-color: rgba($purple, .3);
+        h3
+        {
+            line-height: 1;
+
+            text-transform: uppercase;
+        }
+        span
+        {
+            display: block;
+
+            margin-top: rem-calc(15);
+            margin-bottom: rem-calc(15);
+        }
+    }
+    &__central
+    {
+        @include absolute-center;
+    }
+}

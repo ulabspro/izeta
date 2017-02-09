@@ -1,0 +1,35 @@
+.block-big {
+  position: relative;
+}
+.block-big-panel {
+  color: #fff;
+  background-color: rgba($purple, .94);
+
+  @include breakpoint(medium) {
+    max-width: 50%;
+    &--center {
+      @include absolute-center;
+    }
+    &--left {
+      left: 100px;
+
+      @include vertical-center;
+    }
+    &--right {
+      right: 100px;
+
+      @include vertical-center;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+
+    font-size: rem-calc(45);
+  }
+}
+
+.callout {
+  @include breakpoint(small) {
+    padding: rem-calc(20);
+  }
+}

@@ -1,0 +1,23 @@
+.block-triple-panel {
+  padding: 25px 40px;
+  &.primary {
+    background-color: rgba($purple, .94);
+  }
+  &__title {
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+
+    font-size: rem-calc(45);
+    line-height: 1;
+
+    @include breakpoint(small) {
+      font-size: rem-calc(32);
+    }
+    @include breakpoint(medium) {
+      font-size: rem-calc(35);
+    }
+  }
+}

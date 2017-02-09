@@ -1,0 +1,146 @@
+.menu-left
+{
+    margin-top: 20px;
+    padding-left: 20px;
+    &__wrap-item
+    {
+        margin-bottom: 1.3rem;
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+    &__link
+    {
+        font-size: 1rem;
+
+        display: inline !important;
+
+        text-transform: uppercase;
+
+        color: #fff;
+        &:hover
+        {
+            color: #fff;
+            border-bottom: 1px solid rgba(#fff, .38);
+        }
+    }
+}
+
+
+.mainmenu
+{
+    &__submenu
+    {
+        height: 100vh;
+
+        background-color: $light-purple;
+        &--white
+        {
+            background: $white;
+            li a
+            {
+                color: $black;
+                &:hover
+                {
+                    color: $purple;
+                }
+            }
+            .mainmenu__submenu-title
+            {
+                color: $black;
+            }
+        }
+    }
+    & li a
+    {
+        padding-left: 3.75rem;
+    }
+    & &__submenu li a
+    {
+        padding-left: 2rem;
+
+        text-transform: none;
+    }
+}
+
+
+.mainmenu__logo
+{
+    display: block;
+
+    margin-top: 1.5rem;
+    // @include bg-svg($logo-white);
+
+    text-align: center;
+    .icon
+    {
+        font-size: rem-calc(192);
+        line-height: 0;
+
+        color: $white;
+    }
+    &--white
+    {
+        .icon
+        {
+            color: $black;
+        }
+    }
+}
+
+.mainmenu__toggler
+{
+    //   margin-top: $section-margin;
+    // @include hamburger($white,$white,32px,32px);
+    color: $white;
+    &:hover
+    {
+        color: $white;
+    }
+    .icon
+    {
+        font-size: rem-calc(32);
+    }
+}
+
+.mainmenu__submenu-title
+{
+    margin-bottom: $section-margin/2;
+    padding-left: 2rem;
+}
+
+.mainmenu__item
+{
+    text-transform: uppercase;
+
+    color: $white;
+}
+
+.mainmenu__submenu-item
+{
+    color: $white;
+}
+
+
+//
+.active.is-drilldown-submenu-parent a::after
+{
+    border-color: transparent transparent transparent $white;
+}
+
+
+.off-canvas__submenu
+{
+    //    position: fixed;
+    //    z-index: 2!important;
+}
+
+.menu
+{
+    &.nested
+    {
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+}

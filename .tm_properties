@@ -1,0 +1,8 @@
+# settings
+fontSize         = 18
+
+
+# rules
+excludeInFolderSearch = "{$excludeInFolderSearch,bower_components,_site,node_modules,migrations,venv,admin_build,dev}"
+include = "{$include,.gitignore}"
+excludeInFileChooser = "{$exclude,$excludeInFolderSearch}"

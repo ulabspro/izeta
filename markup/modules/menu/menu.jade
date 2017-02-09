@@ -1,0 +1,56 @@
+mixin menu-list(pages,opts)
+  - opts = opts || {};
+  - var recursive = opts.recursive || false;
+  - attrs = {};
+  - if (opts.drilldown)attrs['data-drilldown'] = '';
+  - if (opts.mod)attrs['class'] = opts.mod;
+  ul.vertical.menu&attributes(attrs)
+    for page in pages
+      li(class=page.active?'active':'')
+        a(href=page.slug).mainmenu__item #{page.title}
+        if recursive
+          if page.children
+            - var nestedOpts = {}
+            - if (opts.nested) nestedOpts.mod = 'nested'
+            +menu-list(page.children,nestedOpts)
+
+
+mixin menu(pages, mainMenuVisible)
+  .off-canvas.position-left.mainmenu(data-off-canvas,
+                            data-position="left",
+                            id="offCanvas",
+                            class=mainMenuVisible?'reveal-for-large':'')
+    a(href="#" title="").mainmenu__logo
+      i.icon.icon-logo
+    .show-for-large
+      +menu-list(pages)
+          
+    //- ul.menu.vertical(data-drilldown)
+    .hide-for-large
+      +menu-list(pages,{drilldown:true,recursive:true})
+
+mixin submenu(pages, title, whiteMenu)
+  .off-canvas.off-canvas__submenu.position-left.mainmenu.reveal-for-large.show-for-large(
+  data-off-canvas, 
+  data-position="left",
+  id="offCanvasSecond")
+    .row
+      .columns.shrink
+        .u-sectionMargin
+        a.mainmenu__toggler(data-open="offCanvas",
+                            aria-expanded="false",
+                            aria-controls="offCanvasLeft")
+          i.icon.icon-menu
+      .columns.mainmenu__submenu.noGutter(class=whiteMenu?'mainmenu__submenu--white':'')
+        a(href="#" title="").mainmenu__logo(class=whiteMenu?'mainmenu__logo--white':'')
+          i.icon.icon-logo
+        h4.u-uppercase.mainmenu__submenu-title #{title}
+        +menu-list(pages,{nested:true,recursive:true})
+
+mixin menu-mixin(pages, whiteMenu)
+  - var mainMenuVisible = true;
+  for page in pages
+    if (page.active || page.contains_active) && page.children
+      - mainMenuVisible = false;
+      +submenu(page.children, page.title, whiteMenu)
+  +menu(pages, mainMenuVisible)

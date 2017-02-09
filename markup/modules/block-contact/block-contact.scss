@@ -1,0 +1,71 @@
+.block-contact
+{
+    color: $purple;
+}
+
+.block-contact-form
+{
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: rem-calc(90);
+
+    background-color: rgba($white, .76);
+
+    @include absolute-center;
+    @include breakpoint(medium)
+    {
+        width: 50%;
+        padding-top: rem-calc(45);
+    }
+    &__title
+    {
+        font-size: rem-calc(45);
+        line-height: 1;
+
+        padding-right: rem-calc(90);
+        padding-left: rem-calc(90);
+
+        text-align: center;
+        text-transform: uppercase;
+
+        @include breakpoint(medium)
+        {
+            font-size: rem-calc(35);
+        }
+    }
+    &__text
+    {
+        font-size: rem-calc(22);
+        line-height: 1;
+
+        padding-top: rem-calc(40);
+        padding-right: rem-calc(90);
+        padding-bottom: rem-calc(40);
+        padding-left: rem-calc(90);
+
+        text-align: center;
+
+        @include breakpoint(medium)
+        {
+            padding-right: rem-calc(45);
+            padding-left: rem-calc(45);
+        }
+    }
+    form
+    {
+        padding-right: rem-calc(90);
+        padding-left: rem-calc(90);
+    }
+    &__field
+    {
+        border: 2px solid $purple;
+    }
+    &__submit
+    {
+        display: block;
+
+        margin: auto;
+
+        background-color: $purple;
+    }
+}

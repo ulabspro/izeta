@@ -1,0 +1,26 @@
+.footer
+{
+    background-color: $purple;
+}
+
+.footer-social
+{
+    margin-top: rem-calc(20);
+    &__item
+    {
+        display: block;
+
+        margin-right: 10px;
+        margin-left: 10px;
+
+        color: #6b7a8c;
+        &:hover
+        {
+            color: #fff;
+        }
+        .icon
+        {
+            font-size: rem-calc(25);
+        }
+    }
+}

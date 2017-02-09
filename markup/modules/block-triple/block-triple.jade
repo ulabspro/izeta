@@ -1,0 +1,18 @@
+mixin block-triple(data)
+  - var data = getBigBlockData(data)
+  .block-triple.row.full.noGutter.align-middle(data-equalizer data-equalize-on="medium")
+    .columns.small-12.medium-4
+      .block-triple-panel.callout.text-center.primary(data-equalizer-watch)
+        h3.block-triple-panel__title #{data.title[0]}
+        a.button.hollow(href=data.link) #{data.btnText}
+      img(src=data.img[0])
+    .columns.small-12.medium-4
+      img(src=data.img[1])
+      .block-triple-panel.callout.text-center.primary(data-equalizer-watch)
+        h3.block-triple-panel__title #{data.title[1]}
+        a.button.hollow(href=data.link) #{data.btnText}
+    .columns.small-12.medium-4
+      .block-triple-panel.callout.text-center.primary(data-equalizer-watch)
+        h3.block-triple-panel__title #{data.title[2]}
+        a.button.hollow(href=data.link) #{data.btnText}
+      img(src=data.img[2])

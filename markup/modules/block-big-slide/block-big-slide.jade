@@ -1,0 +1,13 @@
+mixin block-big-slide(position)
+  .block-big-slide
+    .block-big-slide__item
+      - var data = {img:'%=staticPrefix=%img/content/collection-24.jpg',title:"Выезд к заказчику",btnText:'Подробнее'}
+      +block-big(data, position)
+
+    .block-big-slide__item
+      - var data = {img:'%=staticPrefix=%img/content/collection-11.jpg',title:"Выезд к заказчику",btnText:'Подробнее'}
+      +block-big(data, position)
+
+    .block-big-slide__item
+      - var data = {img:'%=staticPrefix=%img/content/collection-24.jpg',title:"Выезд к заказчику",btnText:'Подробнее'}
+      +block-big(data, position)

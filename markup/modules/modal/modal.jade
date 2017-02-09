@@ -1,0 +1,138 @@
+mixin modal-basket
+  .modal-full.reveal#modal-basket(data-reveal)
+    //- basket
+    .modal.modal-basket
+      .modal__title Состав заказа
+
+      .modal-basket-card
+        .row
+          .columns.small-12.medium-4
+            img(src="http://placehold.it/167x250&text=mainpage")
+          .columns.small-12.medium-8
+            .modal-basket-card__name Название товара
+            .modal-basket-card__text эксклюзивная шуба из натурального меха норки
+            .modal-basket-card__cost 4000 €
+
+            .modal-basket-card-count
+              .row.full.noGutter
+                .columns.shrink
+                  .modal-basket-card-count__btn.modal-basket-card-count__btn--minus(class="modalMinus") -
+              
+                .columns.shrink
+                  input(type="text" placeholder="" value="1").modal-basket-card-count__field(class="modalCount")
+              
+                .columns.shrink
+                  .modal-basket-card-count__btn.modal-basket-card-count__btn--plus(class="modalPlus") +
+                  
+
+      .modal-basket-card
+        .row
+          .columns.small-12.medium-4
+            img(src="http://placehold.it/167x250&text=mainpage")
+          .columns.small-12.medium-8
+            .modal-basket-card__name Название товара
+            .modal-basket-card__text эксклюзивная шуба из натурального меха норки
+            .modal-basket-card__cost 4000 €
+
+            .modal-basket-card-count
+              .row.full.noGutter
+                .columns.shrink
+                  .modal-basket-card-count__btn.modal-basket-card-count__btn--minus(class="modalMinus") -
+              
+                .columns.shrink
+                  input(type="text" placeholder="" value="1").modal-basket-card-count__field(class="modalCount")
+              
+                .columns.shrink
+                  .modal-basket-card-count__btn.modal-basket-card-count__btn--plus(class="modalPlus") +
+
+    //- personal
+    .modal.modal-personal
+      .modal__title персональные данные
+
+      form(data-abide)
+        label Имя
+          input(type="text" value="" placeholder="" aria-describedby="help-text-name" required)
+
+        label Телефон
+          input(type="text" value="" placeholder="" aria-describedby="help-text-phone" required)
+
+        p.help-text#help-text-name Вы не указали контактный телефон
+        p.help-text#help-text-phone Вы не указали контактный телефон
+
+    //- delivery
+    .modal.modal-delivery
+      .modal__title доставка
+
+      form(data-abide)
+        .row
+          .columns.small-12.medium-6
+            input(type="radio" name="")
+            label Самовывоз
+          .columns.small-12.medium-6
+            input(type="radio" name="")
+            label Курьерская доставка
+        .row
+          .columns
+            label Город
+              input(type="text" value="" placeholder="")
+
+        .row
+          .columns
+            label Адрес
+              input(type="text" value="" placeholder="")
+
+        .row
+          .columns.small-12.medium-4
+            label Квартира/Офис
+              input(type="text" value="" placeholder="")
+          .columns.small-12.medium-4
+            label Подъезд
+              input(type="text" value="" placeholder="")
+          .columns.small-12.medium-4
+            label Этаж
+              input(type="text" value="" placeholder="")
+
+        .row
+          .columns
+            label Комментарий к адресу
+              textarea(placeholder="" rows="3")
+
+
+    //- pay
+    .modal.modal-pay
+      .modal__title доставка
+
+      form(data-abide)
+        .row
+          .columns.small-12.medium-6
+            input(type="radio" name="")
+            label Наличными
+          .columns.small-12.medium-6
+            input(type="radio" name="")
+            label Банковской картой
+
+    //- total
+    .modal.modal-total
+      .modal__title Итого
+
+      form(data-abide)
+        .row
+          .columns.text-left
+            .modal-total__text Всего товаров:
+          .columns.text-right
+            .modal-total__text 8000 €
+
+        .row
+          .columns.text-left
+            .modal-total__text Стоимость доставки:
+          .columns.text-right
+            .modal-total__text 5 €
+
+        .modal-total__cost
+          .row
+            .columns
+              .modal-total__text.modal-total__text--big Общая сумма:
+            .columns
+              .modal-total__text.modal-total__text--big.text-right 8005 €
+
+        input(type="submit" value="Оформить заказ").button.modal-total__submit

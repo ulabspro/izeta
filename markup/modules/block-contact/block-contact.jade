@@ -1,0 +1,14 @@
+mixin block-contact()
+  .block-contact.row.full.noGutter
+    .columns
+      img(src='%=staticPrefix=%img/content/collection-39.jpg' alt="")
+      .block-contact-form
+        .block-contact-form__title Связаться с персональным менеджером
+
+        .block-contact-form__text Заполните форму ниже и с Вами свяжется наш менеджер. 
+
+        form(method="" action="")
+          input(type="text" value="" placeholder="Имя").block-contact-form__field
+          input(type="text" value="" placeholder="Телефон").block-contact-form__field
+
+          input(type="submit" value="Отправить").button.block-contact-form__submit

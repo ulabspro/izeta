@@ -1,0 +1,13 @@
+mixin block-inline(data)
+  - var data = getBigBlockData(data)
+  - var mod = mod || 'center';
+  .block-inline.row.full.align-top(class="block-inline--"+mod)
+    .columns.small-12.medium-9
+      .block-inline-panel
+        h3.block-inline-panel__title #{data.title}
+        br
+        p.block-inline-panel__text.u-sectionMargin #{data.text}
+        - if (data.btnText)
+          a.button.hollow(href=data.link) #{data.btnText}
+    .columns.show-for-medium.noGutter
+      img(src=data.img)

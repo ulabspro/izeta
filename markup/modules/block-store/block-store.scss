@@ -1,0 +1,189 @@
+.store-filters
+{
+    margin-bottom: 1rem;
+    //    padding-top: 35px;
+    padding-top: 5rem;
+    &__button
+    {
+        font-size: rem-calc(20);
+
+        background-color: #6b7a8c;
+
+        @include breakpoint(medium)
+        {
+            font-size: rem-calc(14);
+        }
+        &:hover
+        {
+            background-color: #6b7a8c + #111;
+        }
+    }
+}
+
+.store-filters-options
+{
+    &__wrap
+    {
+        list-style: none;
+    }
+    &__title
+    {
+        font-size: rem-calc(14);
+
+        padding-bottom: 1px;
+
+        color: rgb(21,25,34);
+        border-bottom: 1px solid rgba(21,25,34,.38);
+    }
+}
+
+.block-store
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin-bottom: 35px;
+
+    transition: all .2s ease-in-out;
+
+    color: $purple;
+    &:hover
+    {
+        box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
+        .block-store-info
+        {
+            bottom: 0;
+
+            visibility: visible;
+
+            opacity: 1;
+        }
+        .block-store-meta
+        {
+            right: 0;
+
+            visibility: visible;
+
+            opacity: 1;
+        }
+    }
+}
+
+.block-store-info
+{
+    position: absolute;
+    z-index: 1;
+    bottom: -100%;
+
+    visibility: hidden;
+
+    width: 100%;
+    padding: 25px;
+
+    transition: all .4s ease;
+
+    opacity: 0;
+    background-color: #fff;
+
+    @include breakpoint(medium)
+    {
+        padding: 15px;
+    }
+    &__title
+    {
+        font-size: rem-calc(20);
+        line-height: rem-calc(24);
+
+        margin-bottom: 10px;
+
+        @include breakpoint(medium)
+        {
+            font-size: rem-calc(16);
+            line-height: rem-calc(19);
+        }
+    }
+    &__text
+    {
+        font-size: rem-calc(12);
+
+        margin-bottom: 10px;
+    }
+    &__cost
+    {
+        font-size: rem-calc(18);
+    }
+    &__icon
+    {
+        color: #000;
+
+        @include bg-svg($search);
+    }
+}
+
+.block-store-meta
+{
+    position: absolute;
+    top: 0;
+    right: -100%;
+
+    visibility: hidden;
+
+    box-sizing: border-box;
+    width: rem-calc(80);
+    height: rem-calc(136);
+    padding-top: 25px;
+
+    transition: all .4s ease-in-out;
+
+    opacity: 0;
+    background-color: #6b7a8c;
+    &__item
+    {
+        font-size: rem-calc(32);
+        line-height: 1;
+
+        display: block;
+
+        margin: auto;
+        margin-bottom: 15px;
+
+        text-align: center;
+
+        color: $white;
+    }
+}
+
+.block-store-more
+{
+    color: $purple;
+    &:hover
+    {
+        color: $purple - #111;
+    }
+    &__content
+    {
+        width: 100%;
+
+        @include absolute-center;
+    }
+    &__icon
+    {
+        font-size: rem-calc(120);
+        line-height: 1;
+
+        margin: auto;
+
+        text-align: center;
+    }
+    &__text
+    {
+        font-size: rem-calc(22);
+
+        margin-top: 25px;
+
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

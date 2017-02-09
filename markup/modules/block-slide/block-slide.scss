@@ -1,0 +1,12 @@
+.block-slide {
+  color: $purple;
+  &__item {
+    padding: 60px;
+    strong {
+      display: block;
+
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

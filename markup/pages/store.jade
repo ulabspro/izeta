@@ -1,0 +1,15 @@
+extends ./_layout.jade
+
+
+
+block append variables
+  - var whiteMenu = true;
+  
+
+
+block content
+  //- +filter()
+  +store-filters
+  - for (var i = 0; i < 3; i++)
+    +block-store()
+  +block-store-more()

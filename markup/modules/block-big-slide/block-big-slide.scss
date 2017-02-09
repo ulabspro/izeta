@@ -1,0 +1,9 @@
+.block-big-slide {
+	.slick-prev {
+		z-index: 10;
+		@include bg-svg($prev-white);
+	}
+	.slick-next {
+		@include bg-svg($next-white);
+	}
+}

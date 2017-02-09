@@ -1,0 +1,25 @@
+.block-inline {
+  padding: 5rem 0rem 5rem 8rem;
+
+  background-color: $purple;
+
+  @include breakpoint(small) {
+    padding: rem-calc(20);
+  }
+}
+
+.block-inline-panel {
+  //    padding-bottom: 60px;
+  &__title {
+    //        margin-top: 60px;
+    text-transform: uppercase;
+
+    color: #fff;
+  }
+  &__text {
+    //        padding-top: 1rem;
+    //        padding-right: 70px;
+    //        padding-bottom: 1rem;
+    color: #fff;
+  }
+}
